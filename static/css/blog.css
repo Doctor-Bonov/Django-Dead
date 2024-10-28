@@ -1,3 +1,10 @@
+h1 a {
+    color: #FCA205;
+    font-family: 'Lobster';
+}
+body {
+    padding-left: 15px;
+}
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
@@ -19,9 +26,6 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    display: inline-block;
-    margin-right: 15px; /* Збільшуємо відступ між датою та заголовком */
-    vertical-align: top; /* Вирівнюємо по верхній лінії заголовка */
     float: right;
     color: #828282;
 }
@@ -46,6 +50,5 @@ h1, h2, h3, h4 {
 }
 
 .post h1 a, .post h1 a:visited {
-    margin-top: 50px;
     color: #000000;
 }
