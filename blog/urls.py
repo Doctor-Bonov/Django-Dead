@@ -9,7 +9,12 @@ urlpatterns = [
     path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
+<<<<<<< HEAD
     re_path('accounts/login/', views.LoginView.as_view(), name='login'),
+=======
+    path('accounts/login/', views.LoginView.as_view(), name='login'),
+    # urls.py
+>>>>>>> 2af0e9187fc2a49d9389908f1901b736a8e173ed
     path('accounts/logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('home/', TemplateView.as_view(template_name='home.html'), name='home'),
     path('drafts/', views.post_draft_list, name='post_draft_list'),
