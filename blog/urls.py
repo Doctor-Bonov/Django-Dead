@@ -1,6 +1,6 @@
 from django.urls import  path, re_path
 from . import views
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LoginView, LogoutView, TemplateView
 urlpatterns = [
     re_path(r'^$', views.post_list, name='post_list'),
     re_path(r'^post/new/$', views.post_new, name='post_new'),
@@ -10,6 +10,7 @@ urlpatterns = [
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
     re_path('accounts/login/', views.LoginView.as_view(), name='login'),
-    path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('accounts/logout/', LogoutView.as_view(next_page='/'), name='logout'),
+    path('home/', TemplateView.as_view(template_name='home.html'), name='home'),
     path('drafts/', views.post_draft_list, name='post_draft_list'),
 ]
